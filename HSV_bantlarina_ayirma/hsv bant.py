@@ -1,0 +1,15 @@
+import cv2
+image_path = "C:/Users/Nisanur/Desktop/intern tasks/img.jpg"
+image = cv2.imread(image_path)
+hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+h_channel, s_channel, v_channel = cv2.split(hsv_image)
+cv2.namedWindow("H Channel", cv2.WINDOW_NORMAL)
+cv2.imshow("H Channel", h_channel)
+cv2.waitKey(0)
+cv2.namedWindow("S Channel", cv2.WINDOW_NORMAL)
+cv2.imshow("S Channel", s_channel)
+cv2.waitKey(0)
+cv2.namedWindow("V Channel", cv2.WINDOW_NORMAL)
+cv2.imshow("V Channel", v_channel)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
