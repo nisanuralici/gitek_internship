@@ -1,0 +1,10 @@
+import cv2
+img = cv2.imread("img.jpg")
+cv2.namedWindow("original image", cv2.WINDOW_NORMAL)
+cv2.imshow("original image", img)
+cv2.waitKey(0)
+img= cv2.line(img, (200,200), (100,100), (255,0,0), 5) 
+cv2.namedWindow("line image", cv2.WINDOW_NORMAL)
+cv2.imshow("line image", img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
